@@ -74,3 +74,34 @@ const func = function(){
 
 // typeOf of array , object -> object 
 // typeOf of function -> function
+
+// ****************** Memory **************************
+
+// Stack (primitive) and Heap (Non - primitive)
+
+// Primitive -> call by value
+
+let penOne = "red" // use stack -> variable store in stack
+let penTwo = penOne // provide copy -> of penOne
+penTwo = "blue"
+
+console.log("penOne -> ", penOne)
+console.log("penTwo -> ", penTwo)
+
+// Non - primitive -> call by reference
+
+let userOne = { // variable store in -> stack -> make value in heap -> and variable point to heap
+    'email' : 'good@email.com',
+    'upi' : 'good@ybl'
+}
+
+let userTwo = userOne // point to -> userOne
+
+userTwo.email = 'veryGood@gmail.com'
+
+console.log("userOne -> ", userOne.email)
+console.log("userTwo -> ", userTwo.email)
+
+
+
+
